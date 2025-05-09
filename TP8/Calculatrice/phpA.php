@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "Méthode non autorisée.";
 
 }
-echo "<br><a href='index.html'>Revenir à la calculatrice</a>";
+echo "<br><a href='indexA.html'>Revenir à la calculatrice</a>";
 
 ?>
 </body>
