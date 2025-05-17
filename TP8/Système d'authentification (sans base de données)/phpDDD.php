@@ -29,7 +29,7 @@
            if ($password!==$passwordRepeat) {
             array_push($errors," mot de passe incorrect");
            }
-           require_once "database.php";
+           require_once "phpDDD.php";
            $sql = "SELECT * FROM user WHERE email = '$email'";
            $result = mysqli_query($conn, $sql);
            $rowCount = mysqli_num_rows($result);
@@ -57,7 +57,7 @@
 
         }
         ?>
-        <form action="registration.php" method="post">
+        <form action="phpDD.php" method="post">
             <div class="form-group">
                 <input type="text" class="form-control" name="fullname" placeholder="Full Name:">
             </div>
