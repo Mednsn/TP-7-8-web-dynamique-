@@ -1,25 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-   
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 50px;
-        }
-        input, button {
-            padding: 10px;
-            font-size: 16px;
-            margin: 10px;
-        }
-        .resultat {
-            font-weight: bold;
-            font-size: 20px;
-            color: green;
-        }
-    </style>
 </head>
 <body>
 
@@ -27,12 +8,12 @@
 function genererMotDePasse($longueur) {
     $lettres = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
     $chiffres = '0123456789';
-    $speciaux = '!@#$%^&*()_+-=[]{}|;:,.<>?';
+    $speciaux = 'mosstafes';
     $tous = $lettres . $chiffres . $speciaux;
 
     $motDePasse = '';
 
-    // Ajout garanti d'un caractère de chaque type
+    
     $motDePasse .= $lettres[rand(0, strlen($lettres) - 1)];
     $motDePasse .= $chiffres[rand(0, strlen($chiffres) - 1)];
     $motDePasse .= $speciaux[rand(0, strlen($speciaux) - 1)];
@@ -41,7 +22,6 @@ function genererMotDePasse($longueur) {
         $motDePasse .= $tous[rand(0, strlen($tous) - 1)];
     }
 
-    // Mélange aléatoire des caractères
     $motDePasse = str_shuffle($motDePasse);
 
     return $motDePasse;
